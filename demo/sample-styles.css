@@ -5,7 +5,7 @@
  
 .slider-wrapper { 
     position: relative; 
-    background: #fff;
+    background: #fff url(images/loading.gif) no-repeat 50% 50%;
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.4);
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
@@ -81,3 +81,23 @@
     transition: none;
 }
 #slider-control-nav a.active { background-position: 100% 0; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-width : 480px) {
+
+    #slider-direction-nav,
+	#slider-control-nav { opacity: 1; }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	
+	#slider-direction-nav,
+	#slider-control-nav { opacity: 1; }
+
+}

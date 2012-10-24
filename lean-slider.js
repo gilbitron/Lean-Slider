@@ -72,7 +72,7 @@
             if(settings.controlNav && $(settings.controlNav).length){
                 slides.each(function(i){
                     var controlNav = $('<a href="#" class="lean-slider-control-nav">'+ (i + 1) +'</a>');
-                    if(settings.controlNavBuilder) controlNav = $(settings.controlNavBuilder.call(this, i));
+                    if(settings.controlNavBuilder) controlNav = $(settings.controlNavBuilder.call(this, i, $(slides[i])));
                     
                     controlNav.on('click', function(e){
                         e.preventDefault();
