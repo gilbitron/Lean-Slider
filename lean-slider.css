@@ -1,6 +1,6 @@
 /*
  * Lean Slider v1.0
- * http://dev7studios.com
+ * http://dev7studios.com/lean-slider
  *
  * Copyright 2012, Dev7studios
  * Free to use and abuse under the MIT license.
