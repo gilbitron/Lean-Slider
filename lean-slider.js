@@ -10,24 +10,7 @@
 ;(function($) {
 
     $.fn.leanSlider = function(options) {
-    
-        // Defaults
-        var defaults = {
-            pauseTime: 4000,
-            pauseOnHover: true,
-            startSlide: 0,
-            directionNav: '',
-            directionNavPrevBuilder: '',
-            directionNavNextBuilder: '',
-            controlNav: '',
-            controlNavBuilder: '',
-            prevText: 'Prev',
-            nextText: 'Next',
-            beforeChange: function(){},
-            afterChange: function(){},
-            afterLoad: function(){}
-        };
-        
+
         // Set up plugin vars
         var plugin = this,
             settings = {},
@@ -38,7 +21,7 @@
         
         var init = function() {
             // Set up settings
-            settings = $.extend({}, defaults, options);
+            settings = $.extend({}, $.fn.leanSlider.defaults, options);
                 
             // Add inital classes
             slider.addClass('lean-slider');
@@ -173,5 +156,22 @@
         // Call constructor
         return init();
     };
-    
+
+    // Defaults
+    $.fn.leanSlider.defaults = {
+        pauseTime: 4000,
+        pauseOnHover: true,
+        startSlide: 0,
+        directionNav: '',
+        directionNavPrevBuilder: '',
+        directionNavNextBuilder: '',
+        controlNav: '',
+        controlNavBuilder: '',
+        prevText: 'Prev',
+        nextText: 'Next',
+        beforeChange: function(){},
+        afterChange: function(){},
+        afterLoad: function(){}
+    };
+
 })(jQuery);
